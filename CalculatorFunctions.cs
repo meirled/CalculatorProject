@@ -8,6 +8,25 @@ using System.Threading.Tasks;
 
 public static class CalculatorFunctions
 {
+    public static double FullCalculator(string input)
+    {  
+        // Full calculator - takes string input and returns the result.
+        // If there is any error in the input, it throws appropriate exception
+        // The calculator implements - +,-,*,/
+
+        // Split string tokens
+        List<string> tokens = SplitInput(input);
+
+        // Validate tokens
+        ValidateOperators(tokens);
+
+        // Calculate
+        double result = CalculateExpression(tokens);
+
+        Console.WriteLine($"Result of the expression '{input}' is: {result}");
+
+        return result;
+    }
 
     public static List<string> SplitInput(string input)
         // This function Splits input string into numbers and non-numeric characters. For example - "960/43+44/54" -> ['960','/','43','+','44','54'].
@@ -105,11 +124,13 @@ public static class CalculatorFunctions
         // 2. For each ( there is a ) in the end.
         // 3. before each ( there is an operator (*,\,-,+)
         // 4. after each ) there is an operator (*,\,-,+) 
+
+        throw new Exception("Method isn't implemented yet.");
     }
 
 
 
-    public static List<string> CalculateExpression(List<string> tokens)
+    public static double CalculateExpression(List<string> tokens)
     {
         // This function calculates the expression given in tokens. It handles +,-,*,/ operators.
         // It assumes that the input has been validated and is in the correct format.
@@ -168,9 +189,10 @@ public static class CalculatorFunctions
             }
         }
 
+        double finalResult = double.Parse(string.Join("", tokens));
 
 
-        return tokens;
+        return finalResult;
     }
 
 
@@ -178,8 +200,7 @@ public static class CalculatorFunctions
     {
         // For each brackets, apply CalculateExpression.
 
-
-        throw new Exception($"Not handeled yet");
+        throw new Exception($"Method isn't implemented yet");
     }
 
 }

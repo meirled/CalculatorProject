@@ -3,12 +3,17 @@
 
 
 // Check Split Input
-string input = "17/2+3/2/2";
-List<string> parts = CalculatorFunctions.SplitInput(input);
-CalculatorFunctions.ValidateOperators(parts);
+string input = "17/2+3/2/2+1*2";
 
-List<string> result = CalculatorFunctions.CalculateExpression(parts);
-Console.WriteLine($"Result of the expression '{input}' is: {string.Join("", result)}");
+double result = CalculatorFunctions.FullCalculator(input);
+
+
+
+//List<string> parts = CalculatorFunctions.SplitInput(input);
+//CalculatorFunctions.ValidateOperators(parts);
+//double result = CalculatorFunctions.CalculateExpression(parts);
+//Console.WriteLine($"Result of the expression '{input}' is: {result}");
+
 
 
 //Console.WriteLine($"string input: {input}.\n string output:");
