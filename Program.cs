@@ -16,3 +16,5 @@ Console.WriteLine($"Result of the expression '{input}' is: {string.Join("", resu
 //{
 //    Console.WriteLine(part);
 //}
+
+// try with brackets
